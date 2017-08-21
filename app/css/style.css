@@ -1,0 +1,291 @@
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url("/fonts/CenturyGothic/CenturyGothic.eot");
+  src: local("CenturyGothic"), local("Century Gothic"), url("/fonts/CenturyGothic/CenturyGothic.eot?#iefix") format("embedded-opentype"), url("/fonts/CenturyGothic/CenturyGothic.woff") format("woff"), url("/fonts/CenturyGothic/CenturyGothic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url("/fonts/CenturyGothic-Bold/CenturyGothic-Bold.eot");
+  src: local("CenturyGothic-Bold"), local("Century Gothic Bold"), url("/fonts/CenturyGothic-Bold/CenturyGothic-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/CenturyGothic-Bold/CenturyGothic-Bold.woff") format("woff"), url("/fonts/CenturyGothic-Bold/CenturyGothic-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RubikBold';
+  src: url("/fonts/Rubik-Bold/Rubik-Bold.eot");
+  src: local("Rubik-Bold"), local("Rubik Bold"), url("/fonts/Rubik-Bold/Rubik-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/Rubik-Bold/Rubik-Bold.woff") format("woff"), url("/fonts/Rubik-Bold/Rubik-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  background-color: white;
+  font-family: CenturyGothic, Arial, sans-serif;
+  font-size: 16px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: RubikBold, Verdana, sans-serif;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+h1::after, h2::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 8px;
+  width: 100px;
+  background-color: #000;
+}
+
+.btn {
+  background-color: #000;
+  font-weight: bold;
+  outline: none;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  min-width: 100px;
+  text-align: center;
+  padding: 4px 0;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: #c1c1c1;
+  border-color: #c1c1c1;
+}
+
+.btn:active {
+  background-color: #fff;
+  color: #000;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+/*** HEADER ***/
+.page-header {
+  min-height: 70px;
+  background-color: #000;
+  color: #fff;
+}
+
+.logo {
+  float: left;
+  padding-top: 5px;
+}
+
+.logo img {
+  width: 61px;
+  height: 60px;
+}
+
+.btn-buy {
+  float: right;
+  margin-top: 20px;
+}
+
+.main-nav {
+  float: right;
+  font-size: 0;
+  max-width: 1000px;
+  margin-right: 15px;
+}
+
+.main-nav > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.main-nav a, .main-nav span {
+  cursor: pointer;
+  position: relative;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 25px 15px;
+}
+
+.main-nav a::after, .main-nav span::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  height: 2px;
+  width: 0;
+  background-color: #fff;
+  transition: width 0.5s;
+}
+
+.main-nav ul li:hover > a::after, .main-nav li:hover > span::after {
+  width: 40px;
+}
+
+.sub-list {
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  background-color: #333;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 110%;
+  min-width: 150px;
+  z-index: 2;
+  transition: all 0.5s ease-out;
+}
+
+.main-nav li:hover .sub-list {
+  top: 100%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.sub-list li {
+  display: block;
+}
+
+.sub-list a, .sub-list span {
+  padding: 15px 20px 15px 70px;
+  white-space: nowrap;
+}
+
+.sub-list a::before, .sub-list span::before {
+  top: 5px;
+  left: 15px;
+  content: "";
+  position: absolute;
+  background: #333 url("../img/small-kross.png") center center no-repeat;
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+}
+
+.sub-list a::after {
+  bottom: 10px;
+  left: 70px;
+}
+
+.sub-list .active span {
+  cursor: default;
+}
+
+.sub-list .active span::after {
+  width: 40px;
+  bottom: 10px;
+  left: 70px;
+}
+
+/*** END HEADER ***/
+/*** SECTION ABOUT-ITEM ***/
+.about-item {
+  min-height: 520px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.about-item .container {
+  position: relative;
+}
+
+.about-item h1 {
+  margin: 0;
+  position: relative;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+.about-item .item-photo {
+  padding: 10px;
+  width: 60%;
+  float: right;
+}
+
+/*** END SECTION ABOUT-ITEM ***/
+/*** SECTION CHARACTERISTICS ***/
+.characteristics {
+  background: #222 url("../img/neboskreb_gorod.jpg") center center no-repeat;
+  margin-bottom: 130px;
+}
+
+.characteristics-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  min-height: 460px;
+}
+
+.characteristics .container {
+  position: relative;
+}
+
+.characteristics img {
+  position: absolute;
+  width: 506px;
+  top: -80px;
+}
+
+.characteristics .text-block {
+  background-color: #fff;
+  margin-left: 50%;
+  padding: 0 40px;
+  min-height: 460px;
+  width: 320px;
+}
+
+.characteristics h2 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+/*** END SECTION CHARACTERISTICS ***/
+/*** PREVIEW 360 ***/
+.preview {
+  padding: 200px 50px;
+}
+
+.preview-360 {
+  position: relative;
+}
+
+.preview-360::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: 250px;
+  width: 100px;
+  height: 85px;
+  background: url("/img/360.svg") center center no-repeat;
+}
+
+/*** END PREVIEW 360 ***/

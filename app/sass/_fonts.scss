@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'CenturyGothic';
+    src: url('/fonts/CenturyGothic/CenturyGothic.eot');
+    src: local('CenturyGothic'), local('Century Gothic'),
+         url('/fonts/CenturyGothic/CenturyGothic.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/CenturyGothic/CenturyGothic.woff') format('woff'),
+         url('/fonts/CenturyGothic/CenturyGothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CenturyGothic';
+    src: url('/fonts/CenturyGothic-Bold/CenturyGothic-Bold.eot');
+    src: local('CenturyGothic-Bold'), local('Century Gothic Bold'),
+         url('/fonts/CenturyGothic-Bold/CenturyGothic-Bold.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/CenturyGothic-Bold/CenturyGothic-Bold.woff') format('woff'),
+         url('/fonts/CenturyGothic-Bold/CenturyGothic-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RubikBold';
+    src: url('/fonts/Rubik-Bold/Rubik-Bold.eot');
+    src: local('Rubik-Bold'), local('Rubik Bold'),
+         url('/fonts/Rubik-Bold/Rubik-Bold.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Rubik-Bold/Rubik-Bold.woff') format('woff'),
+         url('/fonts/Rubik-Bold/Rubik-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
