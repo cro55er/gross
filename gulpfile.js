@@ -17,9 +17,11 @@ gulp.task('sass', function () {
 });
 
 gulp.task('css', ['sass'], function () {
-  return gulp.src(['app/libs/**/*.css', 'app/css/**/*.css'])
+  return gulp.src(['app/libs/**/*.css',
+                   'app/css/**/*.css',
+                   '!app/css/main.css'])
     .pipe(concatCss('main.css'))
-    .pipe(gulp.dest('app/'))
+    .pipe(gulp.dest('app/css/'))
     .pipe(browserSync.stream());
     console.log(gulp.src(['app/libs/**/*.css', 'app/css/**/*.css']));
 });
