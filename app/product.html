@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- build:css -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- endbuild -->
     <title>Gross</title>
 </head>
 <body class="inner-page">
@@ -23,14 +25,14 @@
                         <span>Модели</span>
                         <ul class="sub-list">
                             <li><a href="#" class="small-solo">Ultera Solo</a></li>
-                            <li class="active" class="small-ginn"><span>Ultera Ginn</span></li>
+                            <li class="active"><span class="small-ginn">Ultera Ginn</span></li>
                             <li><a href="#" class="small-chilli">Ultera Chilli</a></li>
                             <li><a href="#" class="small-prima">Ultera Prima</a></li>
                         </ul>
                     </li>
                     <li><a href="#">О бренде</a></li>
                 </ul>
-                <a href="#" class="btn btn-buy">Купить</a>
+                <a href="order.html" class="show-popup btn btn-buy" data-target="popup-order">Купить</a>
             </nav>
         </div>
     </header>
@@ -78,13 +80,14 @@
                     </p>
                 </div>
                 <div class="item-photo">
-                    <img src="img/ultera-ginn-bottom.png">
+                    <img src="img/ultera-ginn-bottom.png" alt="Ultera ginn снизу">
                 </div>
             </div>
         </div>
     </section>
 
     <section class="preview">
+        <h2 class="screen-reader-text">Прокрутите модель в 3D</h2>
         <div class="container">
             <div class="preview-360">
                 <img src="img/ultera-ginn-360.png" alt="preview 360 degree">
@@ -93,6 +96,7 @@
     </section>
 
     <section class="gallery">
+        <h2 class="screen-reader-text">Галерея</h2>
         <img src="img/gallery.jpg" alt="gallery">
     </section>
 
@@ -119,21 +123,21 @@
                 </p>
             </div>
             <div class="feature-photo">
-                <img src="img/for-features-block.jpg">
+                <img src="img/for-features-block.jpg" alt="Ultera ginn">
             </div>
             <div class="in-stock">
                     <ul>
-                        <li class="btn not-available"><span>Нет в наличии</span>39</li>
-                        <li class="btn not-available"><span>Нет в наличии</span>40</li>
-                        <li class="btn">41</li>
-                        <li class="btn">42</li>
-                        <li class="btn">43</li>
-                        <li class="btn">44</li>
-                        <li class="btn">45</li>
-                        <li class="btn active">46</li>
+                        <li class="size btn not-available"><span>Нет в наличии</span>39</li>
+                        <li class="size btn not-available"><span>Нет в наличии</span>40</li>
+                        <li class="size btn">41</li>
+                        <li class="size btn">42</li>
+                        <li class="size btn">43</li>
+                        <li class="size btn">44</li>
+                        <li class="size btn">45</li>
+                        <li class="size btn active">46</li>
                     </ul>
                     <span class="price">-250$</span>
-                    <a href="#" class="btn btn-buy">Я покупаю</a>
+                    <a href="#" class="show-popup btn btn-white" data-target="popup-order">Я покупаю</a>
             </div>
         </div>
     </section>
@@ -174,24 +178,25 @@
     </section>
 
     <section class="sneakers">
+        <h2 class="screen-reader-text">Другие модели</h2>
         <div class="container clearfix">
             <article class="sneakers-item">
-                <h1>Ultera Solo</h1>
+                <h2>Ultera Solo</h2>
                 <img src="img/ultera-solo.jpg" alt="Ultera Solo photo">
                 <a href="#" class="btn btn-white">Подробнее</a>
             </article>
             <article class="sneakers-item current">
-                <h1>Ultera Ginn</h1>
+                <h2>Ultera Ginn</h2>
                 <img src="img/ultera-ginn.jpg" alt="Ultera Solo photo">
-                <span href="#" class="btn btn-white">Подробнее</span>
+                <span class="btn btn-white">Подробнее</span>
             </article>
             <article class="sneakers-item">
-                <h1>Ultera Chilli</h1>
+                <h2>Ultera Chilli</h2>
                 <img src="img/ultera-chilli.jpg" alt="Ultera Solo photo">
                 <a href="#" class="btn btn-white">Подробнее</a>
             </article>
             <article class="sneakers-item">
-                <h1>Ultera Prima</h1>
+                <h2>Ultera Prima</h2>
                 <img src="img/ultera-prima.jpg" alt="Ultera Solo photo">
                 <a href="#" class="btn btn-white">Подробнее</a>
             </article>
@@ -201,18 +206,18 @@
     <footer class="page-footer">
         <div class="container clearfix">
             <ul class="footer-contacts">
-                <li class="contact-phone">+38(099) 177 08 37</li>
-                <li class="contact-viber">+38(099) 177 08 37</li>
-                <li class="contact-email">gross@gmail.com</li>
+                <li class="contact-phone"><a href="tel:+38(099) 177 08 37">+38(099) 177 08 37</a></li>
+                <li class="contact-viber"><a href="tel:+38(099) 177 08 37">+38(099) 177 08 37</a></li>
+                <li class="contact-email"><a href="mailto:gross@gmail.com<">gross@gmail.com</a></li>
             </ul>
             <div class="footer-logo">
                 <img src="img/logo.png" width="111" height="109" alt="logo">
             </div>
             <nav class="footer-nav">
                 <ul>
-                    <li><a href="#">Доставка</a></li>
-                    <li><a href="#">Способы оплаты</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a class="show-popup" data-target="popup-delivery" href="delivery.html">Доставка</a></li>
+                    <li><a class="show-popup" data-target="popup-payment" href="payment.html">Способы оплаты</a></li>
+                    <li><a class="show-popup" data-target="popup-contacts" href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
             <ul class="footer-social">
@@ -222,7 +227,70 @@
             </ul>
         </div>
     </footer>
-
+    <div class="page-overlay"></div>
+    <div class="popup popup-delivery">
+        <h3>Доставка</h3>
+        <p>
+            Далеко-далеко за словесными горами в стране,
+            гласных и согласных живут рыбные тексты.
+            Ведущими переулка дорогу, строчка встретил
+            ipsum, власти инициал последний себя
+            реторический диких даль меня, злых то?
+            Вопрос взгляд вершину переписали.
+        </p>
+        <button class="popup-btn-close" type="button">
+            <span class="screen-reader-text">Закрыть</span>
+        </button>
+    </div>
+    <div class="popup popup-payment">
+        <h3>Способы оплаты</h3>
+        <p>
+            Далеко-далеко за словесными горами в стране,
+            гласных и согласных живут рыбные тексты.
+            Ведущими переулка дорогу, строчка встретил
+            ipsum, власти инициал последний себя
+            реторический диких даль меня, злых то?
+            Вопрос взгляд вершину переписали.
+        </p>
+        <button class="popup-btn-close" type="button">
+            <span class="screen-reader-text">Закрыть</span>
+        </button>
+    </div>
+    <div class="popup popup-contacts">
+        <h3>Контакты</h3>
+        <p>
+            Далеко-далеко за словесными горами в стране,
+            гласных и согласных живут рыбные тексты.
+            Ведущими переулка дорогу, строчка встретил
+            ipsum, власти инициал последний себя
+            реторический диких даль меня, злых то?
+            Вопрос взгляд вершину переписали.
+        </p>
+        <button class="popup-btn-close" type="button">
+            <span class="screen-reader-text">Закрыть</span>
+        </button>
+    </div>
+        <div class="popup popup-order">
+            <h3>Заказ</h3>
+            <form action="" method="post" class="order-form">
+                <label>Модель:
+                    <select name="model">
+                        <option value="Ultera Ginn">Ultera Ginn</option>
+                        <option value="Ultera Solo">Ultera Solo</option>
+                        <option value="Ultera Chilli">Ultera Chilli</option>
+                        <option value="Ultera Prima">Ultera Prima</option>
+                    </select>
+                </label>
+                <label>Размер:<input name="size" type="number" placeholder="Укажите размер"></label>
+                <label>Номер телефона:<input name="phone" type="text" placeholder="Введите номер телефона"></label>
+                <button type="submit" class="btn">Заказать</button>
+            </form>
+        <button class="popup-btn-close" type="button">
+            <span class="screen-reader-text">Закрыть</span>
+        </button>
+    </div>
+    <!-- build:js -->
     <script src="js/custom.js"></script>
+    <!-- endbuild -->
 </body>
 </html>

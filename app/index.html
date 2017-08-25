@@ -4,10 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <!-- build:css -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- endbuild -->
     <title>Gross</title>
 </head>
-<body>
-    <a style="font-size: 100px; display: block; text-align: center; margin-top: 10%;" href="product.html" class="main">ТЫКНИ СЮДА</a>
+<body class="inner-page">
+     <header class="page-header">
+        <div class="container clearfix">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Gross logo">
+                </a>
+            </div>
+            <button class="toggle-menu" type="button"><span>Меню</span></button>
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <span>Модели</span>
+                        <ul class="sub-list">
+                            <li><a href="#" class="small-solo">Ultera Solo</a></li>
+                            <li class="active"><span class="small-ginn">Ultera Ginn</span></li>
+                            <li><a href="#" class="small-chilli">Ultera Chilli</a></li>
+                            <li><a href="#" class="small-prima">Ultera Prima</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">О бренде</a></li>
+                </ul>
+                <a href="order.html" class="show-popup btn btn-buy" data-target="popup-order">Купить</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+         <a style="font-size: 100px; display: block; text-align: center; margin-top: 10%;" href="product.html" class="main">ТЫКНИ СЮДА</a>
+    </main>
+
+   <footer class="page-footer">
+        <div class="container clearfix">
+            <ul class="footer-contacts">
+                <li class="contact-phone"><a href="tel:+38(099) 177 08 37">+38(099) 177 08 37</a></li>
+                <li class="contact-viber"><a href="tel:+38(099) 177 08 37">+38(099) 177 08 37</a></li>
+                <li class="contact-email"><a href="mailto:gross@gmail.com<">gross@gmail.com</a></li>
+            </ul>
+            <div class="footer-logo">
+                <img src="img/logo.png" width="111" height="109" alt="logo">
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a class="show-popup" data-target="popup-delivery" href="delivery.html">Доставка</a></li>
+                    <li><a class="show-popup" data-target="popup-payment" href="payment.html">Способы оплаты</a></li>
+                    <li><a class="show-popup" data-target="popup-contacts" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <ul class="footer-social">
+                <li><a href="#" class="social-vk"><span class="screen-reader-text">Вконтакте</span></a></li>
+                <li><a href="#" class="social-fb"><span class="screen-reader-text">Фейсбук</span></a></li>
+                <li><a href="#" class="social-ig"><span class="screen-reader-text">Инстаграмм</span></a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- build:js -->
+    <script src="js/custom.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
+

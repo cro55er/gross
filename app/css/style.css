@@ -26,6 +26,7 @@ body {
   background-color: white;
   font-family: CenturyGothic, Arial, sans-serif;
   font-size: 14px;
+  position: relative;
 }
 
 img {
@@ -33,7 +34,7 @@ img {
   height: auto;
 }
 
-h1, h2 {
+h1, h2, h3 {
   margin: 0;
   margin-bottom: 40px;
   position: relative;
@@ -44,13 +45,23 @@ h1, h2 {
   line-height: 40px;
 }
 
-h1::after, h2::after {
+h3 {
+  font-size: 20;
+  line-height: 30px;
+}
+
+h1::after, h2::after, h3::after {
   position: absolute;
   content: "";
   display: block;
   height: 8px;
   width: 100px;
   background-color: #000;
+}
+
+main {
+  padding: 100px 15px;
+  min-height: 300px;
 }
 
 .btn {
@@ -124,9 +135,14 @@ h1::after, h2::after {
 
 /*** HEADER ***/
 .page-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9;
   padding: 0 15px;
   min-height: 50px;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.85);
   color: #fff;
 }
 
@@ -160,7 +176,6 @@ h1::after, h2::after {
   float: right;
   font-size: 0;
   max-width: 1000px;
-  background-color: #000;
   width: 100%;
   margin-left: -30px;
   height: 0;
@@ -254,7 +269,7 @@ h1::after, h2::after {
   left: 15px;
   content: "";
   position: absolute;
-  background: url("/img/small-kross.png") center center no-repeat;
+  background: url("../img/small-kross.png") center center no-repeat;
   background-size: cover;
   height: 40px;
   width: 40px;
@@ -364,6 +379,7 @@ h1::after, h2::after {
 /*** END HEADER ***/
 /*** SECTION ABOUT-ITEM ***/
 .about-item {
+  margin-top: 50px;
   padding: 50px 15px;
 }
 
@@ -439,7 +455,7 @@ h1::after, h2::after {
   right: 20%;
   width: 10%;
   height: 15%;
-  background: url("/img/360.svg") center center no-repeat;
+  background: url("../img/360.svg") center center no-repeat;
 }
 
 /*** END PREVIEW 360 ***/
@@ -480,6 +496,7 @@ h1::after, h2::after {
 }
 
 .in-stock ul li {
+  line-height: 16px;
   position: relative;
   background-size: 3px;
   border-color: #000;
@@ -509,6 +526,7 @@ h1::after, h2::after {
   border-bottom-right-radius: 0;
   padding: 2px;
   font-size: 10px;
+  line-height: 10px;
   color: #000;
   top: -14px;
   left: -87px;
@@ -539,13 +557,7 @@ h1::after, h2::after {
   font-size: 30px;
   line-height: 36px;
   font-family: RubikBold, Verdana, sans-serif;
-}
-
-.in-stock .btn-buy {
-  margin-top: 40px;
-  margin-right: 0;
-  padding: 10px;
-  display: block;
+  margin-bottom: 50px;
 }
 
 /*** END FEATURES ***/
@@ -595,7 +607,7 @@ h1::after, h2::after {
   margin-bottom: 50px;
 }
 
-.sneakers-item h1 {
+.sneakers-item h2 {
   display: inline-block;
   margin-bottom: 60px;
 }
@@ -655,7 +667,16 @@ h1::after, h2::after {
   margin: 5px;
   line-height: 31px;
   padding-left: 40px;
-  background: #000 url("/img/sprite.png") 0 0 no-repeat;
+  background: #000 url("../img/sprite.png") 0 0 no-repeat;
+}
+
+.footer-contacts a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-contacts a:hover {
+  color: #c1c1c1;
 }
 
 .footer-contacts .contact-phone {
@@ -733,9 +754,8 @@ h1::after, h2::after {
   display: block;
   height: 31px;
   width: 32px;
-  background: #000 url("/img/sprite.png") 0 0 no-repeat;
+  background: #000 url("../img/sprite.png") 0 0 no-repeat;
   margin: 5px;
-  transition: all 0.2s ease-out;
 }
 
 .footer-social .social-vk {
@@ -763,6 +783,101 @@ h1::after, h2::after {
 }
 
 /*** END FOOTER ***/
+/*** POPUPS ***/
+.page-overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.page-overlay.show {
+  display: block;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  left: 10%;
+  right: 10%;
+  top: 100px;
+  min-height: 300px;
+  padding: 30px;
+  box-shadow: 5px 5px 10px #000;
+  z-index: 20;
+  background-color: #fff;
+}
+
+.popup.show {
+  display: block;
+}
+
+.popup-btn-close {
+  border: 0;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  height: 30px;
+  width: 30px;
+  background: none;
+  cursor: pointer;
+}
+
+.popup-btn-close::after,
+.popup-btn-close::before {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 3px;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  right: 13px;
+  box-shadow: 1px 1px 5px #000;
+  border-radius: 10px;
+}
+
+.popup-btn-close::after {
+  transform: rotate(45deg);
+}
+
+.popup-btn-close::before {
+  transform: rotate(-45deg);
+}
+
+.popup-order {
+  left: 50%;
+  margin-left: -150px;
+  width: 300px;
+}
+
+.order-form label {
+  margin: 20px 0;
+  font-size: 16px;
+  display: block;
+}
+
+.order-form input, select {
+  box-sizing: border-box;
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+  padding: 3px;
+}
+
+.order-form .btn {
+  display: block;
+  margin-top: 30px;
+  padding: 5px;
+}
+
+/*** END POPUPS ***/
 /*** MEDIA QUERIES ***/
 @media (min-width: 768px) {
   .main-nav {
@@ -787,7 +902,7 @@ h1::after, h2::after {
     margin-top: -80px;
   }
   .characteristics {
-    background: #222 url("/img/neboskreb_gorod.jpg") center center no-repeat;
+    background: #222 url("../img/neboskreb_gorod.jpg") center center no-repeat;
     margin-bottom: 130px;
   }
   .characteristics-overlay {
@@ -839,7 +954,7 @@ h1::after, h2::after {
   }
   .brand-info {
     min-height: 600px;
-    background: #856333 url("/img/brand-bg.jpg") center center no-repeat;
+    background: #856333 url("../img/brand-bg.jpg") center center no-repeat;
   }
   .brand-info-overlay {
     display: block;
@@ -900,7 +1015,7 @@ h1::after, h2::after {
   .brand-info {
     margin-bottom: 160px;
   }
-  .sneakers-item h1 {
+  .sneakers-item h2 {
     margin-bottom: 120px;
   }
   .sneakers-item img {
