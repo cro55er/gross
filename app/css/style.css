@@ -46,7 +46,7 @@ h1, h2, h3 {
 }
 
 h3 {
-  font-size: 20;
+  font-size: 20px;
   line-height: 30px;
 }
 
@@ -124,13 +124,15 @@ main {
 }
 
 .screen-reader-text {
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
   position: absolute !important;
-  white-space: nowrap;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
+  width: 1px !important;
+  white-space: nowrap !important;
 }
 
 /*** HEADER ***/
@@ -170,6 +172,7 @@ main {
 }
 
 .main-nav {
+  background-color: rgba(0, 0, 0, 0.85);
   position: absolute;
   top: 50px;
   display: block;
@@ -195,12 +198,14 @@ main {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 .main-nav li {
   display: inline-block;
   vertical-align: middle;
   position: relative;
+  height: 100%;
 }
 
 .main-nav ul a, .main-nav ul span {
@@ -317,9 +322,8 @@ main {
   height: 50px;
   font-size: 0;
   text-indent: -9999px;
-  appearance: none;
   box-shadow: none;
-  border-radius: none;
+  border-radius: 0;
   border: none;
   cursor: pointer;
   background: transparent;
@@ -853,8 +857,8 @@ main {
 
 .popup-order {
   left: 50%;
-  margin-left: -150px;
-  width: 300px;
+  margin-left: -170px;
+  width: 280px;
 }
 
 .order-form label {
@@ -888,6 +892,7 @@ main {
     margin-right: 15px;
     margin-left: 0;
     width: auto;
+    background: none;
   }
   .toggle-menu {
     display: none;
@@ -1045,7 +1050,7 @@ main {
     min-height: 520px;
   }
   .brand-info .text-block {
-    width: 6    00px;
+    width: 600px;
   }
   .sneakers {
     margin-bottom: 180px;
@@ -1054,7 +1059,7 @@ main {
     width: 25%;
   }
   .sneakers-item img {
-    max-width: auto;
+    max-width: none;
     height: auto;
     width: 100%;
   }
